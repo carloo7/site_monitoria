@@ -2,7 +2,8 @@
 /* BASIC */
 
 html {
-    background-color: #56baed;
+    background-color: #004684;
+    overflow: hidden;
   }
   
   body {
@@ -31,23 +32,23 @@ html {
   
   /* STRUCTURE */
   
-  .wrapper {
+  #formContainer {
     display: flex;
-    align-items: center;
-    flex-direction: column; 
     justify-content: center;
-    width: 100%;
-    min-height: 100%;
-    padding: 20px;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Para ocultar a barra de rolagem vertical */
   }
-  
+
+
+
   #formContent {
     -webkit-border-radius: 10px 10px 10px 10px;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     background: #fff;
     padding: 30px;
     width: 90%;
-    max-width: 450px;
+    max-width: 500px;
     position: relative;
     padding: 0px;
     -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
@@ -125,7 +126,7 @@ html {
     display: inline-block;
     font-size: 16px;
     margin: 5px;
-    width: 85%;
+    width: 80%;
     border: 2px solid #f6f6f6;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -145,7 +146,11 @@ html {
     color: #cccccc;
   }
   
-  
+  @media screen and (max-width: 440px) {
+    input[type=text] {
+        width: 70%;
+    }
+}
   
   /* ANIMATIONS */
   
@@ -227,6 +232,7 @@ html {
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     animation-delay: 1s;
+    margin-top: 15px;
   }
   
   /* Simple CSS3 Fade-in Animation */
@@ -256,8 +262,4 @@ html {
   *:focus {
       outline: none;
   } 
-  
-  #icon {
-    width:60%;
-  }
   
