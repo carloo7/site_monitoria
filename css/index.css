@@ -1,0 +1,18 @@
+header {
+    background-color: #FFFCFC;
+}
+
+#fixacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7); /* Opacidade de fundo (0.7 é semi-transparente) */
+    padding: 20px;
+}
+
+main h1 {
+    color: #004684;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
