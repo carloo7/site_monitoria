@@ -8,6 +8,28 @@ header {
 
 #fixacao h2 {
     margin-left: 15px !important;
+    margin-top: 20px;
+}
+
+#fixacao p {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.colors {
+    width: 416px;
+    height: 100px;
+    background-color: red;
+    margin-top: 20px;
+}
+
+main p {
+    font-size: 20px;
+}
+
+main .materias {
+    background-color:white;
+    height: 40%;
 }
 
 a {
