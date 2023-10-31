@@ -32,7 +32,7 @@ main .materias {
     height: 40%;
 }
 
-a {
+div a {
     font-family: 'Sofia Sans Condensed', sans-serif;
     letter-spacing: 2px;
     text-decoration: none;
