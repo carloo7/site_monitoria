@@ -9,6 +9,7 @@ header {
 #fixacao h2 {
     margin-left: 15px !important;
     margin-top: 20px;
+    color: #ffffff;
 }
 
 #fixacao p {
@@ -23,8 +24,10 @@ header {
     margin-top: 20px;
 }
 
-main p {
-    font-size: 20px;
+header p {
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
 }
 
 main .materias {
@@ -36,4 +39,5 @@ div a {
     font-family: 'Sofia Sans Condensed', sans-serif;
     letter-spacing: 2px;
     text-decoration: none;
+    margin-right: 20px;
 }
