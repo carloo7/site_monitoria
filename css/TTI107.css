@@ -1,0 +1,35 @@
+/* HEADER */
+
+header {
+    background-color: #004684;
+}
+
+#fixacao img {
+    margin-left: 20px !important;
+}
+
+#fixacao h2 {
+    margin-left: 15px !important;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+#fixacao p {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+header p {
+    font-size: 16px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+div a {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    letter-spacing: 2px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+/* HEADER FIM */
