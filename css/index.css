@@ -8,7 +8,24 @@ header {
     left: 0;
     right: 0;
     background-color: rgba(255, 255, 255, 0.7); /* Opacidade de fundo (0.7 é semi-transparente) */
-    padding: 20px;
+    padding: 50px;
+}
+
+header button.btn {
+    background-color: #004684;
+    letter-spacing: 1px;
+}
+
+header button.btn:hover,
+header button.btn:focus {
+    background-color: #3875aa;
+    border: 1px solid #FFF;
+}
+
+@media (max-width: 576px) {
+    .col-8 {
+        justify-content: flex-end !important;
+    }
 }
 
 main h1 {
@@ -16,4 +33,10 @@ main h1 {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     font-size: 35px;
+}
+
+@media (max-width: 935px) {
+    main h1 {
+        font-size: 26px;
+    }
 }
