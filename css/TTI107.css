@@ -17,19 +17,101 @@ header {
 #fixacao p {
     font-weight: bold;
     margin-left: 10px;
-}
-
-header p {
     font-size: 16px;
     color: #ffffff;
     letter-spacing: 0.5px;
 }
 
+#fixacao p:hover {
+    text-decoration: underline;
+    font-size: 1.01em;
+    transition: font-size 0.3s ease;
+}
+
 div a {
     font-family: 'Sofia Sans Condensed', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-decoration: none;
     margin-right: 20px;
 }
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-7.5px);
+    }
+}
+
+div a.btn:hover {
+    animation: bounce 1s ease;
+    text-decoration: underline white;
+}
+
+header div h1 {
+    font-size: 30px;
+    color: #FFF;
+}
+
 /* HEADER FIM */
+
+/* MAIN */
+
+main article {
+    border: gray 2px solid;
+    border-top: 6px solid #FF0000;
+    padding: 10px;
+    /* display: flex; */
+}
+
+main article p {
+    float: left;
+    font-weight: bold;
+}
+
+main article h2 {
+    margin-top: 50px;
+}
+
+main article figure {
+    margin-top: 100px;
+}
+
+main article#zip {
+    border-top: 6px solid #fed859;
+}
+
+/* FOOTER */
+footer {
+    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #6e6e6e;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.footerdireita,
+.footeresquerda {
+    padding-top: 16px;
+    display: flex;
+}
+
+.footerdireita a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+footer #TERMOS {
+    padding-right: 40px;
+}

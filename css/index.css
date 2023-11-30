@@ -40,3 +40,34 @@ main h1 {
         font-size: 26px;
     }
 }
+
+/* FOOTER */
+footer {
+    
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #6e6e6e;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #FFF;
+}
+
+.footerdireita,
+.footeresquerda {
+    padding-top: 16px;
+    display: flex;
+}
+
+.footerdireita a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+footer #TERMOS {
+    padding-right: 40px;
+}
