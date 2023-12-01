@@ -68,6 +68,10 @@ footer {
     color: #FFF;
 }
 
+.footerdireita a:hover {
+    text-decoration: underline;
+}
+
 footer #TERMOS {
     padding-right: 40px;
 }

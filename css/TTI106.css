@@ -9,7 +9,7 @@ header {
 }
 
 #fixacao h2 {
-    margin-left: 15px !important;
+    margin-left: 10px !important;
     margin-top: 20px;
     color: #ffffff;
 }
@@ -52,6 +52,23 @@ div a.btn:hover {
     text-decoration: underline white;
 }
 
+@media (max-width: 575.98px) {
+
+    .header .row .col-12,
+    .header .row .col-sm-2 {
+        text-align: center;
+    }
+
+    .header .row .col-12 h2,
+    .header .row .col-12 a,
+    .header .row .col-sm-2 img {
+        margin-bottom: 10px;
+        margin-right: 0px;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+}
+
 header div h1 {
     font-size: 30px;
     color: #FFF;
@@ -85,6 +102,69 @@ main article#doc {
     border-top: 6px solid #51a1c1;
 }
 
+main div.justify-content-center button.btn {
+    background-color: rgb(187, 187, 187);
+    border: 3px solid gray;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+/* TESTE FORM POST EXERCÍCIO */
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+
+  .form-container .postar-button {
+    margin-top: 20px;
+  }
+
+  .form-container .postar-button:hover {
+    background-color: #39d69d;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+
+  .form-container .cancel:hover {
+    background-color: rgb(255, 103, 103);
+  }
+  
+
+/* FIM TESTE */
+
 /* FOOTER */
 footer {
     
@@ -110,6 +190,10 @@ footer {
 .footerdireita a {
     text-decoration: none;
     color: #FFF;
+}
+
+.footerdireita a:hover {
+    text-decoration: underline;
 }
 
 footer #TERMOS {
