@@ -88,6 +88,3 @@ function handleFormSubmit(event) {
         closeForm();
     }
 }
-
-
-
