@@ -1,0 +1,5 @@
+from .aluno_views import CadastroNovoAlunoView
+from .monitor_views import CadastroNovoMonitorView
+from .professor_views import CadastroNovoProfessorView
+from .disciplina_views import CadastroNovaDisciplinaView
+from .exercicio_views import CadastroNovoExercicioView
