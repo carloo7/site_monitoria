@@ -1,0 +1,6 @@
+from .aluno_serializer import AlunoSerializer
+from .monitor_serializer import MonitorSerializer
+from .professor_serializer import ProfessorSerializer
+from .disciplina_serializer import DisciplinaSerializer
+from .exercicio_serializer import ExercicioSerializer
+from .aluno_disciplina_serializer import AlunoDisciplinaSerializer
