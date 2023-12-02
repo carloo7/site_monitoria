@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from cadastro_app.models import Monitor
+from cadastro_app.models import Usuario
 import re
 
 class MonitorSerializer(serializers.ModelSerializer):
@@ -16,7 +16,7 @@ class MonitorSerializer(serializers.ModelSerializer):
         if not re.search('([0-9]{2}\.[0-9]{5}-[0-9]@maua.br)', email):
             raise serializers.ValidationError('O e-mail de login deve ser seu email institucional (xx.xxxxx-x@maua.br)')
         return email
-
+    
     class Meta:
-        model = Monitor
+        model = Usuario
         fields = '__all__'

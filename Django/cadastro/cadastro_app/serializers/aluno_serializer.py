@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from cadastro_app.models import Usuario
 from rest_framework import serializers
 import re
 
@@ -18,5 +18,5 @@ class AlunoSerializer(serializers.ModelSerializer):
         return email
 
     class Meta:
-        model = User
-        fields = ('id', 'username', 'first_name', 'last_name', 'email',)
+        model = Usuario
+        fields = '__all__'
