@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const username = document.getElementById("login").value;
         const password = document.getElementById("passwordField").value;
 
-        // Cria um objeto com os dados de email e senha
+        // Cria um objeto com os dados de username e senha
         const data = {
             username: username,
             password: password,
         };
 
         // Envia solicitação POST para o servidor Django
-        fetch("http://localhost:8080/token", {
+        fetch("http://localhost:8080/token/", {
             method: "POST", // Método para solicitar
             headers: {
                 "Content-Type": "application/json",
