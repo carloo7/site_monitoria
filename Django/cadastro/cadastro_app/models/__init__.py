@@ -1,4 +1,4 @@
-from .usuario import Usuario
+
 from .disciplina import Disciplina
 
 from .exercicio import Exercicio

@@ -18,9 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #para obter um access token e um refresh token em função de um username e password
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    #para obter um novo access token em função de um refresh token
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
     path('', include('cadastro_app.urls'))
 ]

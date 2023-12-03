@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     "rest_framework_simplejwt.token_blacklist"
 ]
 
-SIMPLEJWT = {
+SIMPLE_JWT = {
     #quanto tempo o token vai durar
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
     #quanto tempo o refresh token vai durar
@@ -61,6 +61,8 @@ SIMPLEJWT = {
     #tipos de autenticação, vamos usar apenas o Bearer. Tem que ser uma tupla, por isso a virgula no final
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

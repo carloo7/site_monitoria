@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from cadastro_app.models import Usuario
+from django.contrib.auth.models import User
 import re
 
 class MonitorSerializer(serializers.ModelSerializer):
@@ -17,6 +17,12 @@ class MonitorSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('O e-mail de login deve ser seu email institucional (xx.xxxxx-x@maua.br)')
         return email
     
+    password = serializers.CharField(write_only=True)
+    def validate_password(self,password):
+        if not re.search('[0-9]{9}', password):
+            raise serializers.ValidationError('A senha de acesso deve ser o seu RG, sem pontos ou hífens')
+        return password
+    
     class Meta:
-        model = Usuario
-        fields = '__all__'
+        model = User
+        fields = ('username', 'first_name', 'last_name', 'email', 'password', 'is_staff', 'is_superuser')
