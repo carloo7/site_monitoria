@@ -7,28 +7,6 @@
     <link rel="icon" href="https://imt.myopenlms.net/pluginfile.php/1/theme_snap/favicon/1696944828/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<script>
-    let email = "email";
-    let password = "password"
-    document.getElementById("login").onclick(function(){
-        $.ajax({
-            email : document.getElementById("login"),
-            password : document.getElementById("passwordField"),
-            url: 'http://127.0.0.1:8080/token/',
-            type: 'post',
-            contentType: 'json',
-            data: {email, password},
-            dataType: 'json',
-            success: function (data) {
-                console.log(data);
-                localStorage.setItem("token", data.token);
-            },
-            error: function (XHR, status, err) {
-                console.log(err)
-            }
-        })
-    })
-</script>
 <body>
     <div id="formContainer">
         <div id="formContent">
@@ -46,4 +24,5 @@
         </div>
     </div>
 </body>
+<script src="BackEnd/Login.js"></script>
 </html>
