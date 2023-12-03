@@ -172,7 +172,7 @@ main div.justify-content-center button.btn {
 /* FOOTER */
 footer {
     
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     display: flex;
