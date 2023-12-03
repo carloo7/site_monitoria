@@ -21,7 +21,7 @@ function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
 
-// FUNÇÃO TESTE PARA COLOCAR EXERCÍCIO COMO ARTICLE
+// FUNÇÃO TESTE PARA COLOCAR EXERCÍCIO NO LUGAR
 
 function handleFormSubmit(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
