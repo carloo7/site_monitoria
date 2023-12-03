@@ -6,17 +6,17 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault(); // Impede o envio padrão do formulário
 
         // Pega os valores do email e password do login.html
-        const email = document.getElementById("login").value;
+        const username = document.getElementById("login").value;
         const password = document.getElementById("passwordField").value;
 
         // Cria um objeto com os dados de email e senha
         const data = {
-            username: email,
+            username: username,
             password: password,
         };
 
         // Envia solicitação POST para o servidor Django
-        fetch("http://localhost:8080/token/", {
+        fetch("http://localhost:8080/token", {
             method: "POST", // Método para solicitar
             headers: {
                 "Content-Type": "application/json",
