@@ -11,7 +11,7 @@ function abrirPopUp() {
     var popup = window.open('login.html', 'popup', 'width=' + width + ',height=' + height + ',left=' + left + ',top=' + top);
 }
 
-// POP UP PARA POSTAR EXERCÍCIOS
+// POP UP PARA POSTAR EXERCÍCIOS E EXERCÍCIO NO LUGAR
 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
@@ -20,8 +20,6 @@ function openForm() {
 function closeForm() {
     document.getElementById("myForm").style.display = "none";
 }
-
-// FUNÇÃO TESTE PARA COLOCAR EXERCÍCIO NO LUGAR
 
 function handleFormSubmit(event) {
     event.preventDefault(); // Impede o envio padrão do formulário

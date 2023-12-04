@@ -83,7 +83,6 @@ div a.btn:hover {
 /* MAIN */
 
 .colors {
-    width: 416px;
     height: 100px;
     background-color: red;
     margin-top: 40px;
@@ -94,6 +93,7 @@ main .materias {
     background-color: white;
     height: 40%;
     border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
 }
 
 /* FOOTER */
