@@ -74,6 +74,25 @@ header div h1 {
     color: #FFF;
 }
 
+.links-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.links-container a {
+    margin-right: 20px;
+}
+
+header #botaoRespostas {
+    display: none;
+}
+
+@media (max-width: 575.98px) {
+    .links-container {
+        display: inline-block;
+    }
+}
+
 /* HEADER FIM */
 
 /* MAIN */
@@ -97,6 +116,12 @@ main article h2 {
 
 main article figure {
     margin-top: 100px;
+    transition: transform 0.3s ease, cursor 0.3s ease;
+}
+
+main article figure:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 main article#doc {
@@ -104,6 +129,7 @@ main article#doc {
 }
 
 main div.justify-content-center button.btn {
+    display: none;
     background-color: rgb(187, 187, 187);
     border: 3px solid gray;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -166,10 +192,64 @@ main div.justify-content-center button.btn {
 
 /* FIM TESTE */
 
+/* FORMULÁRIO PARA ALUNO ENVIAR EXERCÍCIO */
+
+/* TESTE FORM POST EXERCÍCIO */
+
+/* The popup form - hidden by default */
+.ex-popup {
+    display: none;
+    position: fixed;
+    top: 46%;
+    left: 21%;
+    transform: translate(-50%, 50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 400px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+
+  .form-container .postar-button {
+    margin-top: 20px;
+  }
+
+  .form-container .postar-button:hover {
+    background-color: #39d69d;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+
+  .form-container .cancel:hover {
+    background-color: rgb(255, 103, 103);
+  }
+
+
 /* FOOTER */
 footer {
     
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -199,4 +279,10 @@ footer {
 
 footer #TERMOS {
     padding-right: 40px;
+}
+
+@media (max-width: 993px) {
+    footer {
+        position: relative;
+    }
 }
