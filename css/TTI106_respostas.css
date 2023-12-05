@@ -208,3 +208,9 @@ footer {
 footer #TERMOS {
     padding-right: 40px;
 }
+
+@media (max-width: 768px) {
+    footer {
+        position: relative;
+    }
+}
