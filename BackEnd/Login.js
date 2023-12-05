@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 password: password,
             };
             // CASO O FETCH DE ERRADO, ATIVE ISSO!
-            localStorage.setItem("username", username);
+            // localStorage.setItem("username", username);
 
             // Envia solicitação POST para o servidor Django
             fetch("http://localhost:8080/token/", {
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             // Se a validação falhar, exibe uma mensagem de erro
             console.error("Erro de autenticação: Usuário ou senha inválidos");
+            alert("São aceitos apenas emails da Mauá!")
         }
     });
 });
