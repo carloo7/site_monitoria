@@ -49,7 +49,14 @@
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <article>
                         <p>R:. PDF</p>
-                        <h2>Entrega EX 1</h2>
+                        <p onclick="openAvaliar()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green" class="bi bi-check2" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </p>
+                        <h2>
+                            <a href="https://imgur.com/a/r7fODvi">Entrega EX 1</a>
+                        </h2>
                         <figure>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
                                 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
@@ -57,6 +64,13 @@
                             </svg>
                         </figure>
                     </article>
+                    <div class="form-popup" id="nota">
+                        <form id="uploadForm" class="form-container" onsubmit="enviarNota(event)">
+                            <input type="text" id="notaInput" name="psw" required>
+                            <button type="submit" class="btn postar-button">Avaliar</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">Fechar</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>

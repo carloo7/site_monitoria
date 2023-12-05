@@ -28,7 +28,7 @@ header {
     transition: font-size 0.3s ease;
 }
 
-div a {
+header div a {
     font-family: 'Sofia Sans Condensed', sans-serif;
     letter-spacing: 1px;
     text-decoration: none;
@@ -91,6 +91,15 @@ main article p {
     font-weight: bold;
 }
 
+main article p:nth-child(2) {
+    float: right;
+}
+
+main article p:nth-child(2):hover {
+    transform: scale(1.7);
+    cursor: pointer;
+}
+
 main article h2 {
     margin-top: 50px;
 }
@@ -103,6 +112,66 @@ main article figure {
 main article#doc {
     border-top: 6px solid #51a1c1;
 }
+
+main article h2 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main article h2 a:hover {
+    text-decoration: underline;
+}
+
+
+/* POP UP envio de nota */
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 21%;
+    left: 39%;
+    transform: translate(-50%, 50%);
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 260px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+
+  .form-container .postar-button {
+    margin-top: 20px;
+  }
+
+  .form-container .postar-button:hover {
+    background-color: #39d69d;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+
+  .form-container .cancel:hover {
+    background-color: rgb(255, 103, 103);
+  }
 
 
 /* FOOTER */

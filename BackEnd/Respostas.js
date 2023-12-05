@@ -14,7 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
         if (fileInfoo.type.includes('pdf')) {
             newArticle.innerHTML = `
                 <p>R:. PDF</p>
-                <h2>${fileInfoo.name}</h2>
+                <p onclick="openAvaliar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-exclamation" viewBox="0 0 16 16">
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0z"/>
+                    </svg>
+                </p>
+                <h2><a href="https://imgur.com/a/r7fODvi" target="_blank">${fileInfoo.name}</a></h2>
                 <figure>
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                 class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
@@ -28,7 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (fileInfoo.type.includes('doc') || fileInfoo.type.includes('docx')) {
             newArticle.innerHTML = `
                 <p>R:. DOC/DOCX</p>
-                <h2>${fileInfoo.name}</h2>
+                <p onclick="openAvaliar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="red" class="bi bi-exclamation" viewBox="0 0 16 16">
+                        <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.553.553 0 0 1-1.1 0z"/>
+                    </svg>
+                </p>
+                <h2><a href="https://imgur.com/a/r7fODvi" target="_blank">${fileInfoo.name}</a></h2>
                 <figure>
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
                 class="bi bi-file-earmark" viewBox="0 0 16 16">
@@ -55,3 +65,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+// AVALIAÇÃO DO EXERCÍCIO
+
+function openAvaliar() {
+    document.getElementById('nota').style.display = 'block';
+}
+
+function closeForm() {
+    document.getElementById('nota').style.display = 'none';
+}
+
+function enviarNota(event) {
+    event.preventDefault();
+
+    const notaInput = document.getElementById('notaInput');
+    const nota = parseFloat(notaInput.value);
+
+    if (isNaN(nota) || nota < 0 || nota > 10) {
+        alert('Por favor, insira uma nota válida entre 0 e 10.');
+        return;
+    }
+
+    // Salvar a nota no localStorage
+    localStorage.setItem('avaliacao', nota);
+
+    // Atualizar o símbolo para o SVG de check
+    const paragrafos = document.querySelectorAll('main article p:nth-child(2)');
+
+// Corrige todos os elementos <p> encontrados
+paragrafos.forEach(paragrafo => {
+    paragrafo.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green" class="bi bi-check2" viewBox="0 0 16 16">
+            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+        </svg>
+    `;
+});
+
+if (paragrafos.length === 0) {
+    console.error('Nenhum elemento <p> correspondente encontrado.');
+}
+
+    // Fechar o pop-up
+    closeForm();
+}
